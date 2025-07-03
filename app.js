@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const mongoose = require('mongoose');
-const linkRoute = require('./routes/linkRoute')
+const linkRoute = require('./routes/linkRoute');
+
+app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect('mongodb://localhost/newlinks');
 
