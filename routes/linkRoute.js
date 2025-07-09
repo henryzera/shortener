@@ -5,7 +5,7 @@ const linkController = require('../controllers/linkController');
 router.get('/:title', linkController.redirect);
 
 router.get('/', (req, res) => {
-    res.send('Hello, World!');
+    res.render('index');
 });
 
 router.post('/', linkController.addLink);
