@@ -20,6 +20,5 @@ app.set('views', path.join(__dirname, 'templates'));
 app.use('/', linkRoute);
 
 app.listen(port, ()=>{
-    console.log('dirname: ', __dirname);
     console.log('Server running on port ' + port)
 });
