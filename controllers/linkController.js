@@ -20,7 +20,7 @@ const addLink = async (req, res) => {
         res.send('Link adicionado');
     }
     catch(error){
-        res.send(error);
+        res.render('index', {error, body: req.body});
     }
 }
 
