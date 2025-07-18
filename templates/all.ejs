@@ -8,22 +8,14 @@
 <body>
     <%for(let i = 0; i < links.length; i++){%>
         <div id="<%=links[i]._id%>">
-            <h2><%=links[i].title%></h2>
-            <div><%=links[i].description%></div>
-            <div><%=links[i].url%></div>
-            <button onclick="deleteLink('<%=links[i]._id%>')">Delete</button>
+            <form method="POST" action="/<%=links[i]._id%>?_method=DELETE">
+                <h2><%=links[i].title%></h2>
+                <div><%=links[i].description%></div>
+                <div><%=links[i].url%></div>
+                <button type="submit">Delete</button>
+            </form>
         </div>
     <%}%>
 
-    <script>
-        function deleteLink(id){
-            fetch('/' + id, {method: 'DELETE'}).then(res => {
-                res.text().then(linkId => {
-                    console.log(linkId);
-                    document.getElementById(linkId).remove();
-                })
-            })
-        }
-    </script>
 </body>
 </html>
