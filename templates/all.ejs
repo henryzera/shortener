@@ -11,7 +11,19 @@
             <h2><%=links[i].title%></h2>
             <div><%=links[i].description%></div>
             <div><%=links[i].url%></div>
+            <button onclick="deleteLink('<%=links[i]._id%>')">Delete</button>
         </div>
     <%}%>
+
+    <script>
+        function deleteLink(id){
+            fetch('/' + id, {method: 'DELETE'}).then(res => {
+                res.text().then(linkId => {
+                    console.log(linkId);
+                    document.getElementById(linkId).remove();
+                })
+            })
+        }
+    </script>
 </body>
 </html>

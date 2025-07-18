@@ -5,7 +5,8 @@ const mongoose = require('mongoose');
 const linkRoute = require('./routes/linkRoute');
 const path = require('path');
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true })); // para dados de formulário (HTML)
+app.use(express.json()); // para dados em JSON (APIs, fetch, axios etc.)
 
 mongoose.connect('mongodb://localhost/newlinks');
 

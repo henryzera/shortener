@@ -47,7 +47,8 @@ const deleteLink = async (req, res) => {
     }
 
     try{
-        res.send(await Link.findByIdAndDelete(id));
+       await Link.findByIdAndDelete(id);
+       res.send(id);
     }
     catch(error){
         res.send(error);
