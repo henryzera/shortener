@@ -12,4 +12,8 @@ router.get('/', (req, res) => {
 
 router.post('/', linkController.addLink);
 
+router.delete('/:id', linkController.deleteLink);
+
+router.delete('/', linkController.deleteLink);
+
 module.exports = router;
