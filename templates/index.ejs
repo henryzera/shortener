@@ -6,7 +6,7 @@
     <title>Encurtador</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>Add Link</h1>
 
     <form action="/" method="POST">
         <input class="field" name="title" placeholder="Title" type="text" value="<%=body.title%>">
@@ -15,7 +15,7 @@
         <button>Salvar</button>
 
         <%if(error){%>
-         <h3><%=error.message%></h3>
+            <h3><%=error.message%></h3>
         <%}%>
     </form>
 </body>
