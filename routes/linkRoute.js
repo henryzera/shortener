@@ -6,15 +6,9 @@ const methodOverride = require('method-override');
 router.use(methodOverride('_method'));
 
 router.get('/', linkController.allLinks);
-
 router.get('/:title', linkController.redirect);
-
-router.get('/add', (req, res) => {
-    res.render('index', {error: false, body:{}});
-});
-
+router.get('/add', (req, res) => {res.render('index', {error: false, body:{}})});
 router.get('/edit/:id', linkController.loadLink);
-
 
 router.post('/edit/:id', linkController.editLink);
 router.post('/', linkController.addLink);
