@@ -33,9 +33,9 @@ Durante o desenvolvimento deste projeto, aprofundei meus conhecimentos em:
 - [Bootstrap 5](https://getbootstrap.com/)
 - [Method Override](https://www.npmjs.com/package/method-override)
 
-## 🛠️ Como rodar o projeto
+## 🛠️ Como acessar o projeto
 
-1. Clone o repositório:
+Clone o repositório:
    ```bash
    git clone https://github.com/henryzera/shortener.git
    cd shortener
