@@ -13,7 +13,7 @@
         <h1>Links</h1>
         <a href="/add">Adicionar Links</a>
         <%for(let i = 0; i < links.length; i++){%>
-            <div class="card p-3 mb-3" id="<%=links[i]._id%>">
+            <div class="card p-3 mt-3 fade show" id="<%=links[i]._id%>">
                 <form class="d-flex justify-content-between align-items-center" method="POST" action="/<%=links[i]._id%>?_method=DELETE">
                     <div class="d-flex flex-column">
                         <h2><%=links[i].title%></h2>

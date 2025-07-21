@@ -72,9 +72,14 @@ const editLink = async(req, res) => {
     link.description = req.body.description
     link.url = req.body.url;
 
-    let id = req.params.id;
-    if(!id){
-        id = req.body.id;
+    let id = req.params.id || req.body.id;
+
+    if(!link.title || !link.url) {
+        return res.render('edit', {
+            error: {message: 'Os campos título e URL são obrigatórios.'},
+            body: {...req.body, id}
+            
+        });
     }
 
     try{
